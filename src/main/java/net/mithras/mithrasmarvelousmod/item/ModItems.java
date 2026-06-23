@@ -9,11 +9,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.mithras.mithrasmarvelousmod.MithrasMarvelousMod;
+import net.mithras.mithrasmarvelousmod.food.ModFoods;
 
 import java.util.function.Function;
 
 public class ModItems {
-    public static final Item ORANGE = registerItem("orange", Item::new);
+    public static final Item ORANGE = registerItem("orange", properties -> new Item(properties
+            .food(ModFoods.ORANGE, ModFoods.ORANGE_CONSUMABLE)));
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
