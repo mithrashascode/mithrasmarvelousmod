@@ -15,24 +15,23 @@ public class ModLootTableModifiers {
     private static final Identifier JUNGLE_LEAVES_LOOT_TABLE_ID = Identifier.fromNamespaceAndPath("minecraft", "blocks/jungle_leaves");
 
     public static void modifyLootTables() {
-    LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-        if (source.isBuiltin() && Blocks.ACACIA_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
-            LootPool.Builder poolBuilder = LootPool.lootPool()
-                    .add(LootItem.lootTableItem(ModItems.ORANGE))
-                    .when(LootItemRandomChanceCondition.randomChance(0.01F));
-            tableBuilder.withPool(poolBuilder);
-        }
-    });
-  }
-
-    {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (source.isBuiltin() && Blocks.JUNGLE_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
+            if (source.isBuiltin() && Blocks.ACACIA_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .add(LootItem.lootTableItem(ModItems.BANANA))
-                        .when(LootItemRandomChanceCondition.randomChance(1.0F));
+                        .add(LootItem.lootTableItem(ModItems.ORANGE))
+                        .when(LootItemRandomChanceCondition.randomChance(0.01F));
                 tableBuilder.withPool(poolBuilder);
             }
         });
+        {
+            LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+                if (source.isBuiltin() && Blocks.JUNGLE_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
+                    LootPool.Builder poolBuilder = LootPool.lootPool()
+                            .add(LootItem.lootTableItem(ModItems.BANANA))
+                            .when(LootItemRandomChanceCondition.randomChance(1.0F));
+                    tableBuilder.withPool(poolBuilder);
+                }
+            });
+        }
     }
 }
