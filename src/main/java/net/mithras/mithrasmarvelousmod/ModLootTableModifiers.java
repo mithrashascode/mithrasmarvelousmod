@@ -30,7 +30,7 @@ public class ModLootTableModifiers {
             if (source.isBuiltin() && Blocks.JUNGLE_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .add(LootItem.lootTableItem(ModItems.BANANA))
-                        .when(LootItemRandomChanceCondition.randomChance(0.005F));
+                        .when(LootItemRandomChanceCondition.randomChance(1.01F));
                 tableBuilder.withPool(poolBuilder);
             }
         });
