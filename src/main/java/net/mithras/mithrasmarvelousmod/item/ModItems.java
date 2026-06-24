@@ -16,6 +16,8 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item ORANGE = registerItem("orange", properties -> new Item(properties
             .food(ModFoods.ORANGE, ModFoods.ORANGE_CONSUMABLE)));
+    public static final Item BANANA = registerItem("banana", properties -> new Item(properties
+            .food(ModFoods.BANANA, ModFoods.BANANA_CONSUMABLE)));
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
@@ -28,6 +30,7 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.accept(ORANGE);
+            output.accept(BANANA);
         });
     }
 }
