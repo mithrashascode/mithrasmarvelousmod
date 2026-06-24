@@ -2,8 +2,6 @@ package net.mithras.mithrasmarvelousmod;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.resources.Identifier;
-
 import net.mithras.mithrasmarvelousmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
