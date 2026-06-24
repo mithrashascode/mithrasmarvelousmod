@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.mithras.mithrasmarvelousmod.item.ModItems;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.data.loot.packs.*;
 
 public class ModLootTableModifiers {
@@ -15,7 +16,9 @@ public class ModLootTableModifiers {
     public static void modifyLootTables() {
     LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
         if (source.isBuiltin() && Blocks.ACACIA_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
-            LootPool.Builder poolBuilder = LootPool.lootPool().add(LootItem.lootTableItem(ModItems.ORANGE));
+            LootPool.Builder poolBuilder = LootPool.lootPool()
+                    .add(LootItem.lootTableItem(ModItems.ORANGE))
+                    .when(LootItemRandomChanceCondition.randomChance(0.1F));
             tableBuilder.withPool(poolBuilder);
         }
     });
