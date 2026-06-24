@@ -12,6 +12,7 @@ import net.minecraft.data.loot.packs.*;
 public class ModLootTableModifiers {
 
     private static final Identifier ACACIA_LEAVES_LOOT_TABLE_ID = Identifier.fromNamespaceAndPath("minecraft", "blocks/acacia_leaves");
+    private static final Identifier JUNGLE_LEAVES_LOOT_TABLE_ID = Identifier.fromNamespaceAndPath("minecraft", "blocks/jungle_leaves");
 
     public static void modifyLootTables() {
     LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
@@ -22,5 +23,16 @@ public class ModLootTableModifiers {
             tableBuilder.withPool(poolBuilder);
         }
     });
+  }
+
+    {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            if (source.isBuiltin() && Blocks.JUNGLE_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.BANANA))
+                        .when(LootItemRandomChanceCondition.randomChance(0.005F));
+                tableBuilder.withPool(poolBuilder);
+            }
+        });
     }
 }
