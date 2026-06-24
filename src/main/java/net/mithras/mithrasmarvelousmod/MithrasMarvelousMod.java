@@ -14,5 +14,6 @@ public class MithrasMarvelousMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
