@@ -14,7 +14,7 @@ public class ModLootTableModifiers {
 
     public static void modifyLootTables() {
     LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-        if (source.isBuiltin() && ACACIA_LEAVES_LOOT_TABLE_ID.equals(key)) {
+        if (source.isBuiltin() && Blocks.ACACIA_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
             LootPool.Builder poolBuilder = LootPool.lootPool().add(LootItem.lootTableItem(ModItems.ORANGE));
             tableBuilder.withPool(poolBuilder);
         }
