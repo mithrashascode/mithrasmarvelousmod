@@ -18,7 +18,7 @@ public class ModLootTableModifiers {
         if (source.isBuiltin() && Blocks.ACACIA_LEAVES.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
             LootPool.Builder poolBuilder = LootPool.lootPool()
                     .add(LootItem.lootTableItem(ModItems.ORANGE))
-                    .when(LootItemRandomChanceCondition.randomChance(0.1F));
+                    .when(LootItemRandomChanceCondition.randomChance(0.01F));
             tableBuilder.withPool(poolBuilder);
         }
     });
