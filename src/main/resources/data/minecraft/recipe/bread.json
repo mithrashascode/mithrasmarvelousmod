@@ -5,7 +5,9 @@
     "#": "mithrasmarvelousmod:wheat_flour"
   },
   "pattern": [
-    "###"
+    "  #",
+    " # ",
+    "#  "
   ],
   "result": {
     "count": 1,
