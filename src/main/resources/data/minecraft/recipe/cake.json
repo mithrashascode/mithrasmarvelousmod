@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "minecraft:milk_bucket",
+    "B": "minecraft:sugar",
+    "C": "mithrasmarvelousmod:wheat_flour",
+    "E": "#minecraft:eggs"
+  },
+  "pattern": [
+    "EEE",
+    "BAB",
+    "CCC"
+  ],
+  "result": {
+    "id": "minecraft:cake"
+  }
+}
