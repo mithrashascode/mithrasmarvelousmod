@@ -18,7 +18,7 @@ public class ModItems {
             .food(ModFoods.ORANGE, ModFoods.ORANGE_CONSUMABLE)));
     public static final Item BANANA = registerItem("banana", properties -> new Item(properties
             .food(ModFoods.BANANA, ModFoods.BANANA_CONSUMABLE)));
-
+    public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name),
@@ -31,6 +31,9 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.accept(ORANGE);
             output.accept(BANANA);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
+            output.accept(WHEAT_FLOUR);
         });
     }
 }
