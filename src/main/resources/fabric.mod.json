@@ -3,7 +3,7 @@
 	"id": "mithrasmarvelousmod",
 	"version": "${version}",
 	"name": "Mithras Marvelous Mod",
-	"description": "This mod is my first mod, it adds missing fruits and advanced cooking to stop depending on potions for fun effects in late game.",
+	"description": "This mod is my first mod, it adds 2 fruits to the game in a vanilla friendly way.",
 	"authors": [
 		"MithrasBlockhead"
 	],
@@ -27,7 +27,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.2",
+		"minecraft": ">=26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
