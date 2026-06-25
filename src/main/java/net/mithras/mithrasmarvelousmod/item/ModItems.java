@@ -20,6 +20,9 @@ public class ModItems {
             .food(ModFoods.BANANA, ModFoods.BANANA_CONSUMABLE)));
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
+    public static final Item CHOCOLATE_BAR = registerItem("chocolate_bar", properties -> new Item(properties
+            .food(ModFoods.CHOCOLATE_BAR, ModFoods.CHOCOLATE_BAR_CONSUMABLE)));
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name)))));
@@ -31,6 +34,7 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.accept(ORANGE);
             output.accept(BANANA);
+            output.accept(CHOCOLATE_BAR);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(WHEAT_FLOUR);

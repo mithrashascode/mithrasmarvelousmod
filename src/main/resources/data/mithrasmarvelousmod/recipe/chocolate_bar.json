@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "SMS",
+    "BBB"
+  ],
+  "key": {
+    "C": "minecraft:cocoa_beans",
+    "M": "minecraft:milk_bucket",
+    "S": "minecraft:sugar",
+    "B": "#minecraft:eggs"
+  },
+  "result": {
+    "id": "mithrasmarvelousmod:chocolate_bar",
+    "count": 1
+  }
+}
