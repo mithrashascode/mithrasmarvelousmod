@@ -7,6 +7,8 @@ import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
+import java.util.List;
+
 public class ModFoods {
     public static final FoodProperties ORANGE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.4f).build();
     public static final Consumable ORANGE_CONSUMABLE = Consumables.defaultFood()
@@ -16,11 +18,18 @@ public class ModFoods {
     public static final Consumable BANANA_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
+    public static final FoodProperties ENCHANTED_GOLDEN_BANANA = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();
+    public static final Consumable ENCHANTED_GOLDEN_BANANA_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 400, 1),
+                    new MobEffectInstance(MobEffects.RESISTANCE, 6000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0),
+                    new MobEffectInstance(MobEffects.ABSORPTION, 2400, 3)))).build();
+
     public static final FoodProperties BUTTER = new FoodProperties.Builder().nutrition(2).saturationModifier(0.4f).build();
     public static final Consumable BUTTER_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
 
     public static final FoodProperties CHOCOLATE_BAR = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f).alwaysEdible().build();
     public static final Consumable CHOCOLATE_BAR_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(2.4f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 12000),1f)).build();
+            .consumeSeconds(2.4f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 12000),1f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 12000, 1), 1f)).build();
 }

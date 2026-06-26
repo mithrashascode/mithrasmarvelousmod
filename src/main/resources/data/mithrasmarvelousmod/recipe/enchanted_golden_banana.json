@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "GBG",
+    "GGG"
+  ],
+  "key": {
+    "B": "mithrasmarvelousmod:banana",
+    "G": "minecraft:gold_ingot"
+  },
+  "result": "mithrasmarvelousmod:enchanted_golden_banana"
+}
