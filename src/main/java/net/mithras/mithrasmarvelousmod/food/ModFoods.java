@@ -18,11 +18,17 @@ public class ModFoods {
     public static final Consumable BANANA_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
-    public static final FoodProperties ENCHANTED_GOLDEN_BANANA = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();
-    public static final Consumable ENCHANTED_GOLDEN_BANANA_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 400, 1),
-                    new MobEffectInstance(MobEffects.RESISTANCE, 6000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0),
-                    new MobEffectInstance(MobEffects.ABSORPTION, 2400, 3)))).build();
+    public static final FoodProperties ENCHANTED_COPPER_ORANGE = new FoodProperties.Builder().nutrition(5).saturationModifier(1f).alwaysEdible().build();
+    public static final Consumable ENCHANTED_COPPER_ORANGE_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 200, 1),
+                    new MobEffectInstance(MobEffects.RESISTANCE, 3000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0),
+                    new MobEffectInstance(MobEffects.ABSORPTION, 1200, 3)))).build();
+
+    public static final FoodProperties ENCHANTED_DIAMOND_BANANA = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();
+    public static final Consumable ENCHANTED_DIAMOND_BANANA_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 800, 1),
+                    new MobEffectInstance(MobEffects.RESISTANCE, 12000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, 0),
+                    new MobEffectInstance(MobEffects.ABSORPTION, 4800, 3)))).build();
 
     public static final FoodProperties BUTTER = new FoodProperties.Builder().nutrition(2).saturationModifier(0.4f).build();
     public static final Consumable BUTTER_CONSUMABLE = Consumables.defaultFood()

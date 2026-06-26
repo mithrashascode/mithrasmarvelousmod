@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "COC",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "O": "mithrasmarvelousmod:orange"
+  },
+  "result": "mithrasmarvelousmod:enchanted_copper_orange"
+}
