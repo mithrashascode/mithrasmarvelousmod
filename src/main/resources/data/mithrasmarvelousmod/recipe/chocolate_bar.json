@@ -9,7 +9,7 @@
     "C": "minecraft:cocoa_beans",
     "M": "minecraft:milk_bucket",
     "S": "minecraft:sugar",
-    "B": "#minecraft:eggs"
+    "B": "mithrasmarvelousmod:butter"
   },
   "result": {
     "id": "mithrasmarvelousmod:chocolate_bar",
