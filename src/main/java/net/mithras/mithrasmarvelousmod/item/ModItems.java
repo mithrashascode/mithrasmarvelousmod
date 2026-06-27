@@ -12,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.mithras.mithrasmarvelousmod.MithrasMarvelousMod;
 import net.mithras.mithrasmarvelousmod.food.ModFoods;
-
 import java.util.function.Function;
 
 public class ModItems {
@@ -28,6 +27,8 @@ public class ModItems {
             .food(ModFoods.BUTTER, ModFoods.BUTTER_CONSUMABLE)));
     public static final Item CHEESE = registerItem("cheese", properties -> new Item(properties
             .food(ModFoods.CHEESE, ModFoods.CHEESE_CONSUMABLE)));
+    public static final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
+            .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE)));
     public static final Item CHOCOLATE_BAR = registerItem("chocolate_bar", properties -> new Item(properties
             .food(ModFoods.CHOCOLATE_BAR, ModFoods.CHOCOLATE_BAR_CONSUMABLE)));
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
@@ -46,6 +47,7 @@ public class ModItems {
             output.accept(ORANGE);
             output.accept(ENCHANTED_COPPER_ORANGE);
             output.accept(CHOCOLATE_BAR);
+            output.accept(FRIED_EGG);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(BUTTER);

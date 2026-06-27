@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "#minecraft:eggs",
+  "result": "mithrasmarvelousmod:fried_egg",
+  "experience": 0.4,
+  "cookingtime": 100
+}

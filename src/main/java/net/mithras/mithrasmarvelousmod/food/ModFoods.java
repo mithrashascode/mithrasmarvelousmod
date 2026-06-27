@@ -33,8 +33,13 @@ public class ModFoods {
     public static final FoodProperties BUTTER = new FoodProperties.Builder().nutrition(2).saturationModifier(0.4f).build();
     public static final Consumable BUTTER_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
+
     public static final FoodProperties CHEESE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.4f).build();
     public static final Consumable CHEESE_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.4f).build();
+
+    public static final FoodProperties FRIED_EGG = new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build();
+    public static final Consumable FRIED_EGG_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
 
     public static final FoodProperties CHOCOLATE_BAR = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f).alwaysEdible().build();

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": "#minecraft:eggs",
+  "result": "mithrasmarvelousmod:fried_egg",
+  "experience": 0.5,
+  "cookingtime": 600
+}
