@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": "minecraft:beetroot",
+  "result": "mithrasmarvelousmod:baked_beetroot",
+  "experience": 0.3,
+  "cookingtime": 600
+}

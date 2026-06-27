@@ -17,20 +17,34 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item BANANA = registerItem("banana", properties -> new Item(properties
             .food(ModFoods.BANANA, ModFoods.BANANA_CONSUMABLE)));
+
     public static final Item ORANGE = registerItem("orange", properties -> new Item(properties
             .food(ModFoods.ORANGE, ModFoods.ORANGE_CONSUMABLE)));
+
     public static final Item ENCHANTED_COPPER_ORANGE = registerItem("enchanted_copper_orange", properties -> new Item(properties
             .food(ModFoods.ENCHANTED_COPPER_ORANGE, ModFoods.ENCHANTED_COPPER_ORANGE_CONSUMABLE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.RARE)));
+
     public static final Item ENCHANTED_DIAMOND_BANANA = registerItem("enchanted_diamond_banana", properties -> new Item(properties
             .food(ModFoods.ENCHANTED_DIAMOND_BANANA, ModFoods.ENCHANTED_DIAMOND_BANANA_CONSUMABLE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.RARE)));
+
     public static final Item BUTTER = registerItem("butter", properties -> new Item(properties
             .food(ModFoods.BUTTER, ModFoods.BUTTER_CONSUMABLE)));
+
     public static final Item CHEESE = registerItem("cheese", properties -> new Item(properties
             .food(ModFoods.CHEESE, ModFoods.CHEESE_CONSUMABLE)));
+
+    public static final Item BAKED_BEETROOT = registerItem("baked_beetroot", properties -> new Item(properties
+            .food(ModFoods.BAKED_BEETROOT, ModFoods.BAKED_BEETROOT_CONSUMABLE)));
+
+    public static final Item BAKED_CARROT = registerItem("baked_carrot", properties -> new Item(properties
+            .food(ModFoods.BAKED_CARROT, ModFoods.BAKED_CARROT_CONSUMABLE)));
+
     public static final Item FRIED_EGG = registerItem("fried_egg", properties -> new Item(properties
             .food(ModFoods.FRIED_EGG, ModFoods.FRIED_EGG_CONSUMABLE)));
+
     public static final Item CHOCOLATE_BAR = registerItem("chocolate_bar", properties -> new Item(properties
             .food(ModFoods.CHOCOLATE_BAR, ModFoods.CHOCOLATE_BAR_CONSUMABLE)));
+
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
@@ -46,6 +60,8 @@ public class ModItems {
             output.accept(ENCHANTED_DIAMOND_BANANA);
             output.accept(ORANGE);
             output.accept(ENCHANTED_COPPER_ORANGE);
+            output.accept(BAKED_BEETROOT);
+            output.accept(BAKED_CARROT);
             output.accept(CHOCOLATE_BAR);
             output.accept(FRIED_EGG);
         });

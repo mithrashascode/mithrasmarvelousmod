@@ -18,6 +18,14 @@ public class ModFoods {
     public static final Consumable BANANA_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
+    public static final FoodProperties BAKED_BEETROOT = new FoodProperties.Builder().nutrition(2).saturationModifier(0.6f).build();
+    public static final Consumable BAKED_BEETROOT_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).build();
+
+    public static final FoodProperties BAKED_CARROT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build();
+    public static final Consumable BAKED_CARROT_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).build();
+
     public static final FoodProperties ENCHANTED_COPPER_ORANGE = new FoodProperties.Builder().nutrition(5).saturationModifier(1f).alwaysEdible().build();
     public static final Consumable ENCHANTED_COPPER_ORANGE_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 200, 1),

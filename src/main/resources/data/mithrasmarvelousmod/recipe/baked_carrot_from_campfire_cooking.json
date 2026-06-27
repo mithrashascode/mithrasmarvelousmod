@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": "minecraft:carrot",
+  "result": "mithrasmarvelousmod:baked_carrot",
+  "experience": 0.3,
+  "cookingtime": 600
+}

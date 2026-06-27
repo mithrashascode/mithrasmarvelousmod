@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "minecraft:carrot",
+  "result": "mithrasmarvelousmod:baked_carrot",
+  "experience": 0.2,
+  "cookingtime": 100
+}

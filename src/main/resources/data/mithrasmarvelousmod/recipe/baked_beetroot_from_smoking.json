@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "minecraft:beetroot",
+  "result": "mithrasmarvelousmod:baked_beetroot",
+  "experience": 0.2,
+  "cookingtime": 100
+}

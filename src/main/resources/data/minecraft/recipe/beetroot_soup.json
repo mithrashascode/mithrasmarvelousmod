@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    " B "
+  ],
+  "key": {
+    "B": "minecraft:bowl",
+    "R": "mithrasmarvelousmod:baked_beetroot"
+  },
+  "result": "minecraft:beetroot_soup"
+}
