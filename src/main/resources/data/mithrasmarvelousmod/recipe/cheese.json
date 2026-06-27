@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "BMB",
+    "BBB"
+  ],
+  "key": {
+    "B": "mithrasmarvelousmod:butter",
+    "M": "minecraft:milk_bucket"
+  },
+  "result": "mithrasmarvelousmod:cheese"
+}
