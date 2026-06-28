@@ -6,7 +6,6 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
-
 import java.util.List;
 
 public class ModFoods {
@@ -14,7 +13,7 @@ public class ModFoods {
     public static final Consumable ORANGE_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
-    public static final FoodProperties BANANA = new FoodProperties.Builder().nutrition(4).saturationModifier(1f).build();
+    public static final FoodProperties BANANA = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8f).build();
     public static final Consumable BANANA_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
@@ -24,6 +23,10 @@ public class ModFoods {
 
     public static final FoodProperties BAKED_CARROT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build();
     public static final Consumable BAKED_CARROT_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1.2f).build();
+
+    public static final FoodProperties TOMATO = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).build();
+    public static final Consumable TOMATO_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
     public static final FoodProperties ENCHANTED_COPPER_ORANGE = new FoodProperties.Builder().nutrition(5).saturationModifier(1f).alwaysEdible().build();

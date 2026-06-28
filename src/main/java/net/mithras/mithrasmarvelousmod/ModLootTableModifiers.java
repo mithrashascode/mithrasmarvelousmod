@@ -34,7 +34,16 @@ public class ModLootTableModifiers {
             });
         }
 
-
+        {
+            LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+                if (source.isBuiltin() && Blocks.SHORT_GRASS.getLootTable().map(blockTable -> blockTable.identifier().equals(key.identifier())).orElse(false)) {
+                    LootPool.Builder poolBuilder = LootPool.lootPool()
+                            .add(LootItem.lootTableItem(ModItems.TOMATO_SEEDS))
+                            .when(LootItemRandomChanceCondition.randomChance(0.24F));
+                    tableBuilder.withPool(poolBuilder);
+                }
+            });
+        }
 
     }
 }

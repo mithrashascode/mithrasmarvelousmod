@@ -7,10 +7,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.mithras.mithrasmarvelousmod.MithrasMarvelousMod;
+import net.mithras.mithrasmarvelousmod.block.ModBlocks;
 import net.mithras.mithrasmarvelousmod.food.ModFoods;
 import java.util.function.Function;
 
@@ -47,6 +46,12 @@ public class ModItems {
 
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
+            properties -> new BlockItem(ModBlocks.TOMATO_CROP, properties.useItemDescriptionPrefix()));
+
+    public static final Item TOMATO = registerItem("tomato", properties -> new Item(properties
+            .food(ModFoods.TOMATO, ModFoods.TOMATO_CONSUMABLE)));
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name)))));
@@ -55,11 +60,15 @@ public class ModItems {
     public static void registerModItems() {
         MithrasMarvelousMod.LOGGER.info("Registering Mod Items for " + MithrasMarvelousMod.MOD_ID);
 
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
+            output.accept(TOMATO_SEEDS);
+        });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.accept(BANANA);
             output.accept(ENCHANTED_DIAMOND_BANANA);
             output.accept(ORANGE);
             output.accept(ENCHANTED_COPPER_ORANGE);
+            output.accept(TOMATO);
             output.accept(BAKED_BEETROOT);
             output.accept(BAKED_CARROT);
             output.accept(CHOCOLATE_BAR);

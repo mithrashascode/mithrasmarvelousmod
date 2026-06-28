@@ -3,7 +3,7 @@
 	"id": "mithrasmarvelousmod",
 	"version": "${version}",
 	"name": "Mithras Marvelous Mod",
-	"description": "This mod is my first mod, it adds 2 fruits to the game in a vanilla friendly way.",
+	"description": "This mod is my first mod, it adds fruits, vegetables and advanced foods in a vanilla friendly way. Crop textures used are from Farmer's Delight Refabricated",
 	"authors": [
 		"MithrasBlockhead"
 	],
