@@ -33,18 +33,6 @@ public class ModFoods {
     public static final Consumable TOMATO_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
-    public static final FoodProperties ENCHANTED_COPPER_ORANGE = new FoodProperties.Builder().nutrition(5).saturationModifier(1f).alwaysEdible().build();
-    public static final Consumable ENCHANTED_COPPER_ORANGE_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 200, 1),
-                    new MobEffectInstance(MobEffects.RESISTANCE, 3000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0),
-                    new MobEffectInstance(MobEffects.ABSORPTION, 1200, 3)))).build();
-
-    public static final FoodProperties ENCHANTED_DIAMOND_BANANA = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();
-    public static final Consumable ENCHANTED_DIAMOND_BANANA_CONSUMABLE = Consumables.defaultFood()
-            .consumeSeconds(1.2f).onConsume(new ApplyStatusEffectsConsumeEffect(List.of(new MobEffectInstance(MobEffects.REGENERATION, 800, 1),
-                    new MobEffectInstance(MobEffects.RESISTANCE, 12000, 0), new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, 0),
-                    new MobEffectInstance(MobEffects.ABSORPTION, 4800, 3)))).build();
-
     public static final FoodProperties BUTTER = new FoodProperties.Builder().nutrition(2).saturationModifier(0.4f).build();
     public static final Consumable BUTTER_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
@@ -61,4 +49,10 @@ public class ModFoods {
     public static final Consumable CHOCOLATE_BAR_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(2.4f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 1200),1f))
             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 1200, 1), 1f)).build();
+
+    public static final FoodProperties HEARTY_SOUP = new FoodProperties.Builder().nutrition(8).saturationModifier(1.0f).alwaysEdible().build();
+    public static final Consumable HEARTY_SOUP_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(5.0f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.STRENGTH, 12000),1f))
+            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.RESISTANCE, 12000), 1f)).build();
+
 }

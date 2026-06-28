@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": "mithrasmarvelousmod:soup_mix",
+  "result": "mithrasmarvelousmod:hearty_soup",
+  "experience": 5.0,
+  "cookingtime": 1200
+}

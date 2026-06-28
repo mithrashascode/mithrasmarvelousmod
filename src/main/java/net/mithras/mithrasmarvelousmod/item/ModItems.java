@@ -8,10 +8,12 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.Items.*;
 import net.mithras.mithrasmarvelousmod.MithrasMarvelousMod;
 import net.mithras.mithrasmarvelousmod.block.ModBlocks;
 import net.mithras.mithrasmarvelousmod.food.ModFoods;
 import java.util.function.Function;
+import static net.minecraft.world.item.Items.BOWL;
 
 public class ModItems {
     public static final Item BANANA = registerItem("banana", properties -> new Item(properties
@@ -19,12 +21,6 @@ public class ModItems {
 
     public static final Item ORANGE = registerItem("orange", properties -> new Item(properties
             .food(ModFoods.ORANGE, ModFoods.ORANGE_CONSUMABLE)));
-
-    public static final Item ENCHANTED_COPPER_ORANGE = registerItem("enchanted_copper_orange", properties -> new Item(properties
-            .food(ModFoods.ENCHANTED_COPPER_ORANGE, ModFoods.ENCHANTED_COPPER_ORANGE_CONSUMABLE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.RARE)));
-
-    public static final Item ENCHANTED_DIAMOND_BANANA = registerItem("enchanted_diamond_banana", properties -> new Item(properties
-            .food(ModFoods.ENCHANTED_DIAMOND_BANANA, ModFoods.ENCHANTED_DIAMOND_BANANA_CONSUMABLE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.RARE)));
 
     public static final Item BUTTER = registerItem("butter", properties -> new Item(properties
             .food(ModFoods.BUTTER, ModFoods.BUTTER_CONSUMABLE)));
@@ -46,6 +42,8 @@ public class ModItems {
 
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
+    public static final Item SOUP_MIX = registerItem("soup_mix", Item::new);
+
     public static final Item LETTUCE_SEEDS = registerItem("lettuce_seeds",
             properties -> new BlockItem(ModBlocks.LETTUCE_CROP, properties.useItemDescriptionPrefix()));
 
@@ -57,6 +55,9 @@ public class ModItems {
 
     public static final Item TOMATO = registerItem("tomato", properties -> new Item(properties
             .food(ModFoods.TOMATO, ModFoods.TOMATO_CONSUMABLE)));
+
+    public static final Item HEARTY_SOUP = registerItem("hearty_soup", properties -> new Item(properties
+            .food(ModFoods.HEARTY_SOUP, ModFoods.HEARTY_SOUP_CONSUMABLE).usingConvertsTo(BOWL)));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name),
@@ -72,19 +73,19 @@ public class ModItems {
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
             output.accept(BANANA);
-            output.accept(ENCHANTED_DIAMOND_BANANA);
             output.accept(ORANGE);
-            output.accept(ENCHANTED_COPPER_ORANGE);
             output.accept(LETTUCE);
             output.accept(TOMATO);
             output.accept(BAKED_BEETROOT);
             output.accept(BAKED_CARROT);
-            output.accept(CHOCOLATE_BAR);
             output.accept(FRIED_EGG);
+            output.accept(HEARTY_SOUP);
+            output.accept(CHOCOLATE_BAR);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(BUTTER);
             output.accept(CHEESE);
+            output.accept(SOUP_MIX);
             output.accept(WHEAT_FLOUR);
         });
     }
