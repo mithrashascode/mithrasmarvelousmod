@@ -46,6 +46,12 @@ public class ModItems {
 
     public static final Item WHEAT_FLOUR = registerItem("wheat_flour", Item::new);
 
+    public static final Item LETTUCE_SEEDS = registerItem("lettuce_seeds",
+            properties -> new BlockItem(ModBlocks.LETTUCE_CROP, properties.useItemDescriptionPrefix()));
+
+    public static final Item LETTUCE = registerItem("lettuce", properties -> new Item(properties
+            .food(ModFoods.LETTUCE, ModFoods.LETTUCE_CONSUMABLE)));
+
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
             properties -> new BlockItem(ModBlocks.TOMATO_CROP, properties.useItemDescriptionPrefix()));
 
@@ -61,6 +67,7 @@ public class ModItems {
         MithrasMarvelousMod.LOGGER.info("Registering Mod Items for " + MithrasMarvelousMod.MOD_ID);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
+            output.accept(LETTUCE_SEEDS);
             output.accept(TOMATO_SEEDS);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output -> {
@@ -68,6 +75,7 @@ public class ModItems {
             output.accept(ENCHANTED_DIAMOND_BANANA);
             output.accept(ORANGE);
             output.accept(ENCHANTED_COPPER_ORANGE);
+            output.accept(LETTUCE);
             output.accept(TOMATO);
             output.accept(BAKED_BEETROOT);
             output.accept(BAKED_CARROT);

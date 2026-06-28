@@ -25,6 +25,10 @@ public class ModFoods {
     public static final Consumable BAKED_CARROT_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();
 
+    public static final FoodProperties LETTUCE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f).build();
+    public static final Consumable LETTUCE_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(1f).build();
+
     public static final FoodProperties TOMATO = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).build();
     public static final Consumable TOMATO_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.2f).build();

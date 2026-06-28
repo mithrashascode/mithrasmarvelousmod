@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mithrasmarvelousmod:block/lettuce_crop_stage1"
+  }
+}

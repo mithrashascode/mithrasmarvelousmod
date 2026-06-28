@@ -12,11 +12,16 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import net.mithras.mithrasmarvelousmod.MithrasMarvelousMod;
+import net.mithras.mithrasmarvelousmod.block.custom.LettuceCropBlock;
 import net.mithras.mithrasmarvelousmod.block.custom.TomatoCropBlock;
 
 import java.util.function.Function;
 
 public class ModBlocks {
+
+    public static final Block LETTUCE_CROP = registerBlockWithoutItem("lettuce_crop",
+            properties -> new LettuceCropBlock(properties.noCollision().randomTicks().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
 
     public static final Block TOMATO_CROP = registerBlockWithoutItem("tomato_crop",
             properties -> new TomatoCropBlock(properties.noCollision().randomTicks().sound(SoundType.CROP)

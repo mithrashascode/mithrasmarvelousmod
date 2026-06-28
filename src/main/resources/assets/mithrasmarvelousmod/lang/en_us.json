@@ -12,6 +12,9 @@
   "item.mithrasmarvelousmod.enchanted_copper_orange": "Enchanted Copper Orange",
   "item.mithrasmarvelousmod.tomato": "Tomato",
   "item.mithrasmarvelousmod.tomato_seeds": "Tomato Seeds",
+  "item.mithrasmarvelousmod.lettuce": "Lettuce",
+  "item.mithrasmarvelousmod.lettuce_seeds": "Lettuce Seeds",
 
-  "block.mithrasmarvelousmod.tomato_crop": "Tomato Crop"
+  "block.mithrasmarvelousmod.tomato_crop": "Tomato Crop",
+  "block.mithrasmarvelousmod.lettuce_crop": "Lettuce Crop"
 }
