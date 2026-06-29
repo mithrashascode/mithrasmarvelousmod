@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABO",
+    "WSG",
+    " M "
+  ],
+  "key": {
+    "A": "minecraft:apple",
+    "B": "mithrasmarvelousmod:banana",
+    "O": "mithrasmarvelousmod:orange",
+    "M": "minecraft:milk_bucket",
+    "S": "minecraft:sugar",
+    "G": "minecraft:glow_berries",
+    "W": "minecraft:melon_slice"
+  },
+  "result": "mithrasmarvelousmod:fruit_salad"
+}
