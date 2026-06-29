@@ -65,6 +65,9 @@ public class ModItems {
     public static final Item PIZZA = registerItem("pizza", properties -> new Item(properties
             .food(ModFoods.PIZZA, ModFoods.PIZZA_CONSUMABLE)));
 
+    public static final Item BIG_BURGER = registerItem("big_burger", properties -> new Item(properties
+            .food(ModFoods.BIG_BURGER, ModFoods.BIG_BURGER_CONSUMABLE)));
+
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MithrasMarvelousMod.MOD_ID, name)))));
@@ -87,6 +90,7 @@ public class ModItems {
             output.accept(FRIED_EGG);
             output.accept(HEARTY_SOUP);
             output.accept(PIZZA);
+            output.accept(BIG_BURGER);
             output.accept(CHOCOLATE_BAR);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {

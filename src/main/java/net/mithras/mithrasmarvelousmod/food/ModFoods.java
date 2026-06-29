@@ -48,6 +48,10 @@ public class ModFoods {
     public static final Consumable PIZZA_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(2f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SATURATION, 15),1f)).build();
 
+    public static final FoodProperties BIG_BURGER = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).alwaysEdible().build();
+    public static final Consumable BIG_BURGER_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(2f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SATURATION, 8),1f)).build();
+
     public static final FoodProperties CHOCOLATE_BAR = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f).alwaysEdible().build();
     public static final Consumable CHOCOLATE_BAR_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(2.4f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SPEED, 1200),1f))

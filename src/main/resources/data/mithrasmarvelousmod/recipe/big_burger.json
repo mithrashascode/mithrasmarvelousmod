@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bread",
+    "mithrasmarvelousmod:lettuce",
+    "mithrasmarvelousmod:tomato",
+    "minecraft:cooked_beef",
+    "mithrasmarvelousmod:cheese",
+    "minecraft:cooked_beef",
+    "mithrasmarvelousmod:cheese",
+    "mithrasmarvelousmod:fried_egg",
+    "minecraft:bread"
+  ],
+  "result": "mithrasmarvelousmod:big_burger"
+}
