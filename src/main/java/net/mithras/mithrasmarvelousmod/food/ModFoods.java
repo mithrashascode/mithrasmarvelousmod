@@ -6,7 +6,6 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
-import java.util.List;
 
 public class ModFoods {
     public static final FoodProperties ORANGE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.4f).build();
@@ -41,9 +40,13 @@ public class ModFoods {
     public static final Consumable CHEESE_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
 
-    public static final FoodProperties FRIED_EGG = new FoodProperties.Builder().nutrition(4).saturationModifier(0.6f).build();
+    public static final FoodProperties FRIED_EGG = new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).build();
     public static final Consumable FRIED_EGG_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(1.4f).build();
+
+    public static final FoodProperties PIZZA = new FoodProperties.Builder().nutrition(5).saturationModifier(0.6f).alwaysEdible().build();
+    public static final Consumable PIZZA_CONSUMABLE = Consumables.defaultFood()
+            .consumeSeconds(2f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.SATURATION, 15),1f)).build();
 
     public static final FoodProperties CHOCOLATE_BAR = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2f).alwaysEdible().build();
     public static final Consumable CHOCOLATE_BAR_CONSUMABLE = Consumables.defaultFood()

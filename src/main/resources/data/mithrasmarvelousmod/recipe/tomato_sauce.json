@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TT ",
+    "TT "
+  ],
+  "key": {
+    "T": "mithrasmarvelousmod:tomato"
+  },
+  "result": "mithrasmarvelousmod:tomato_sauce"
+}

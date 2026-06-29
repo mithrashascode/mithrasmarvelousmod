@@ -10,10 +10,13 @@
   "item.mithrasmarvelousmod.chocolate_bar": "Chocolate Bar",
   "item.mithrasmarvelousmod.tomato": "Tomato",
   "item.mithrasmarvelousmod.tomato_seeds": "Tomato Seeds",
+  "item.mithrasmarvelousmod.tomato_sauce": "Tomato Sauce",
   "item.mithrasmarvelousmod.lettuce": "Lettuce",
   "item.mithrasmarvelousmod.lettuce_seeds": "Lettuce Seeds",
   "item.mithrasmarvelousmod.soup_mix": "Soup Mix",
   "item.mithrasmarvelousmod.hearty_soup": "Hearty Soup",
+  "item.mithrasmarvelousmod.raw_pizza": "Raw Pizza",
+  "item.mithrasmarvelousmod.pizza": "Pizza",
 
   "block.mithrasmarvelousmod.tomato_crop": "Tomato Crop",
   "block.mithrasmarvelousmod.lettuce_crop": "Lettuce Crop"

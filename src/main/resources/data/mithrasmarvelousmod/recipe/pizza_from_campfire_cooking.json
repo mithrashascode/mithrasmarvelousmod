@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": "mithrasmarvelousmod:raw_pizza",
+  "result": "mithrasmarvelousmod:pizza",
+  "experience": 0.5,
+  "cookingtime": 600
+}

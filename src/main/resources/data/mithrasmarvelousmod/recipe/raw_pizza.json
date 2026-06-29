@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "TMT",
+    "BBB"
+  ],
+  "key": {
+    "C": "mithrasmarvelousmod:cheese",
+    "T": "mithrasmarvelousmod:tomato_sauce",
+    "B": "minecraft:bread",
+    "M": "#minecraft:meat"
+  },
+  "result": "mithrasmarvelousmod:raw_pizza"
+}
